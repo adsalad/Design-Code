@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const Logo = props => (
     <Container>
-        <Image source={props.image} resizeMode="contain" />
         <Text> {props.text} </Text>
     </Container>
 )
@@ -21,12 +20,7 @@ const Container = styled.View`
   margin: 0 8px;
 `;
 
-const Image = styled.Image`
-    width: 36;
-    height: 36;
-`;
-
 const Text = styled.Text`
-    font-weight: 600;
+    font-weight: bold;
     font-size: 17px;
 `;

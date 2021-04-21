@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Course = props => (
-    <Container>
-        <Cover>
-            <Image source={props.image} />
-            <Logo source={props.logo} resizeMode="contain" />
-            <Subtitle>{props.subtitle}</Subtitle>
-            <Title>{props.title}</Title>
-        </Cover>
-        <Content>
-            <Avatar source={props.avatar} />
-            <Caption>{props.caption}</Caption>
-            <Author>Taught by {props.author}</Author>
-        </Content>
-    </Container>
+  <Container>
+    <Cover>
+      <Image source={props.image} />
+      <Logo source={props.logo} resizeMode="contain" />
+      <Subtitle>{props.subtitle}</Subtitle>
+      <Title>{props.title}</Title>
+    </Cover>
+    <Content>
+      <Avatar source={props.avatar} />
+      <Caption>{props.caption}</Caption>
+      <Author>Taught by {props.author}</Author>
+    </Content>
+  </Container>
 );
 
 export default Course
@@ -22,12 +22,12 @@ export default Course
 
 
 const Container = styled.View`
-  width: 335px;
+  width: 360px;
   height: 335px;
   border-radius: 14px;
   background: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  margin: 15px 50px;
+  margin: 15px 35px;
 `;
 
 //justify-content just pushes children to the bottom
