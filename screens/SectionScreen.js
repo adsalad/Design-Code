@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { TouchableOpacity, StatusBar } from "react-native";
+import { Ionicons } from '@expo/vector-icons'
 
 class SectionScreen extends React.Component {
+
+  componentWillUnmount() {
+    StatusBar.setBarStyle("dark-content", true);
+  }
 
   render() {
 
@@ -9,13 +15,15 @@ class SectionScreen extends React.Component {
 
     return (
       <Container>
+        <StatusBar hidden />
         <Cover>
+          <Image source={section.image} />
           <Wrapper>
-            <Logo source={section.logo}></Logo>
+            <Logo source={section.logo} />
             <Subtitle>{section.subtitle}</Subtitle>
           </Wrapper>
           <Title>{section.title}</Title>
-          <Image source={section.image} />
+          <Caption>{section.caption}</Caption>
         </Cover>
       </Container>
     );
@@ -27,13 +35,10 @@ export default SectionScreen;
 
 const Container = styled.View`
   flex: 1
-  
 `;
 
 const Cover = styled.View`
   height: 375px;
-  align-items: center
-  justify-content: center
 `;
 
 const Image = styled.Image`
@@ -43,26 +48,36 @@ const Image = styled.Image`
 `;
 
 const Title = styled.Text`
-    color: white;
-    width: 250px
-    font-size: 30;
-    font-weight: 600;
-    z-index: 1
-    text-shadow: 1px 1px #000000;
-    margin-left: -130px
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  width: 170px;
+  position: absolute;
+  top: 78px;
+  left: 20px;
+
+`;
+
+const Caption = styled.Text`
+  color: white;
+  font-size: 17px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 300px
 `;
 
 const Wrapper = styled.View`
       flex-direction: row;
-      position: absolute
-      top: 30
-      left: 20
-      z-index: 1
-`;
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      align-items: center;
+    `;
 
 const Logo = styled.Image`
-      width: 25px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
   `;
 
 const Subtitle = styled.Text`
@@ -71,7 +86,7 @@ const Subtitle = styled.Text`
       color: rgba(255, 255, 255, 0.8);
       margin-left: 5px;
       text-transform: uppercase;
-`;
+  `;
 
 
 

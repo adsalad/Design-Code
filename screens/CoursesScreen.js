@@ -16,6 +16,6 @@ export default CoursesScreen;
 
 const Container = styled.View`
       flex: 1;
-    `;
+  `;
 
 const Text = styled.Text``;
