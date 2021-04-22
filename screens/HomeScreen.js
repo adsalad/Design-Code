@@ -28,6 +28,10 @@ function mapDispatchToProps(dispatch) {
 
 class HomeScreen extends React.Component {
 
+  navigationOptions = {
+    headerMode: null
+  }
+
   render() {
     return (
       <Container>
@@ -90,7 +94,6 @@ class HomeScreen extends React.Component {
                 author={course.author}
                 avatar={course.avatar}
                 caption={course.caption}
-
               />
             ))}
           </ScrollView>
@@ -139,78 +142,93 @@ const TitleBar = styled.View`
 
 const logos = [
   {
-    text: "CS 2212"
+    text: "Framer X"
   },
   {
-    text: "CAL 1301"
+    text: "Figma"
   },
   {
-    text: "PSY 1000"
+    text: "Studio"
   },
   {
-    text: "BIO 3391"
+    text: "React"
+  },
+  {
+    text: "Swift"
+  },
+  {
+    text: "Sketch"
   }
 ];
 
 const cards = [
   {
-    title: "CS 2212: Software Engineering",
-    image: require("../assets/background10.jpg"),
-    subtitle: "Western University",
-    caption: "1 of 12 Lectures Finished",
+    title: "React Native for Designers",
+    image: require("../assets/background11.jpg"),
+    subtitle: "React Native",
+    caption: "1 of 12 sections",
     logo: require("../assets/logo-react.png")
   },
   {
-    title: "CAL 1301: Calculus II",
+    title: "Styled Components",
     image: require("../assets/background12.jpg"),
-    subtitle: "Western University",
-    caption: "2 of 12 Lectures Finished",
+    subtitle: "React Native",
+    caption: "2 of 12 sections",
     logo: require("../assets/logo-react.png")
   },
   {
-    title: "PSY 1000: Psychology",
+    title: "Props and Icons",
     image: require("../assets/background13.jpg"),
-    subtitle: "Western University",
-    caption: "7 of 12 Lectures Finished",
+    subtitle: "React Native",
+    caption: "3 of 12 sections",
     logo: require("../assets/logo-react.png")
   },
   {
-    title: "BIO 3391: Bioinformatics",
+    title: "Static Data and Loop",
     image: require("../assets/background14.jpg"),
-    subtitle: "Western University",
-    caption: "5 of 12 Lectures Finished",
+    subtitle: "React Native",
+    caption: "4 of 12 sections",
     logo: require("../assets/logo-react.png")
-  }];
+  }
+];
 
 
 const courses = [
   {
-    title: "CS2209: Computer Architecture",
-    subtitle: "1.0 Course",
-    image: require("../assets/orange.jpg"),
-    logo: require("../assets/arm.png"),
-    author: "Dr. El-Sakka",
+    title: "Prototype in InVision Studio",
+    subtitle: "10 sections",
+    image: require("../assets/background13.jpg"),
+    logo: require("../assets/logo-studio.png"),
+    author: "Meng To",
     avatar: require("../assets/avatar.jpg"),
-    caption: "Equip yourself with ARM programming"
-  },
-
-  {
-    title: "CS2210: Data Structures & Algorithms",
-    subtitle: "1.0 Course",
-    image: require("../assets/blue.jpg"),
-    logo: require("../assets/android.png"),
-    author: "Dr. Solis-Oba",
-    avatar: require("../assets/avatar.jpg"),
-    caption: "Learn Stacks, Trees, Recursion & more!"
+    caption: "Design and interactive prototype"
   },
   {
-    title: "CS1026: Introduction to Programming",
-    subtitle: "0.5 Course",
-    image: require("../assets/green.jpg"),
-    logo: require("../assets/python.png"),
-    author: "Dr. Sanders",
+    title: "React for Designers",
+    subtitle: "12 sections",
+    image: require("../assets/background11.jpg"),
+    logo: require("../assets/logo-react.png"),
+    author: "Meng To",
+    avatar: require("../assets/avatar.jpg"),
+    caption: "Learn to design and code a React site"
+  },
+  {
+    title: "Design and Code with Framer X",
+    subtitle: "10 sections",
+    image: require("../assets/background14.jpg"),
+    logo: require("../assets/logo-framerx.png"),
+    author: "Meng To",
+    avatar: require("../assets/avatar.jpg"),
+    caption: "Create powerful design and code components for your app"
+  },
+  {
+    title: "Design System in Figma",
+    subtitle: "10 sections",
+    image: require("../assets/background6.jpg"),
+    logo: require("../assets/logo-figma.png"),
+    author: "Meng To",
     avatar: require("../assets/avatar.jpg"),
     caption:
-      "Receive an introduction to the world of programming using Python!"
+      "Complete guide to designing a site using a collaborative design tool"
   }
 ];

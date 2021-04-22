@@ -30,22 +30,21 @@ const Content = styled.View`
 
 //this is the logo
 const Logo = styled.Image`
-    width: 30px;
+    width: 38px;
     height: 38px;
 `;
 
 const Caption = styled.Text`
     color: #3c4560;
-    font-size: 18px
+    font-size: 18px;
     font-weight: 600;
-
 `;
 
 const Subtitle = styled.Text`
     color: #b8bece;
     font-size: 12px
     font-weight: 600;
-    text-transform: uppercase
+    text-transform: uppercase;
     margin-top: 4px;
 `;
 

@@ -13,7 +13,8 @@ const inactiveColor = "#b8bece";
 //initial stack navigator
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
-  Section: SectionScreen
+  Section: SectionScreen,
+
 });
 
 const CoursesStack = createStackNavigator({
@@ -46,6 +47,7 @@ CoursesStack.navigationOptions = {
 const TabNavigator = createBottomTabNavigator({
   HomeStack,
   CoursesStack,
+
 });
 
 export default TabNavigator;
