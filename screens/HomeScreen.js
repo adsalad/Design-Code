@@ -35,6 +35,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <Container>
+
         <Menu />
         <SafeAreaView>
           <ScrollView style={{ height: "100%" }}>

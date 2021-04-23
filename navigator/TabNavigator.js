@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import SectionScreen from "../screens/SectionScreen";
 import { Ionicons } from "@expo/vector-icons"
-import Course from "../component/Course";
 import CoursesScreen from "../screens/CoursesScreen";
 
 const activeColor = "#4775f2";
